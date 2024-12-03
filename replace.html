@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    h1{
+        border: 2px red solid;
+    width: 250px;
+    position: relative;
+    left: 40px;
+    }
+    div{
+        border: 2px solid black;
+    height: 200px;
+    }
+    .one{
+    position: relative;
+    left: 450px;
+    bottom: 150px;
+    }
+    #old{
+        position: relative;
+    left: 350px;
+    width: 150px;
+    bottom: 130px;
+    }
+    .two{
+        position: relative;
+    left: 240px;
+    bottom: 100px;
+    }
+    .third{
+        position: relative;
+    left: 450px;
+    bottom: 80px;
+    }
+    #new{
+        
+        position: relative;
+    left: 350px;
+    width: 150px;
+    bottom: 60px;
+    
+    }
+    .all{
+        position: relative;
+    left: 230px;
+    bottom: 30px;
+    }
+
+</style>
+</head>
+<body>
+    
+<div>
+    <h1 id="text">Hi friends,Hello Friends,how are you Friends</h1>
+    <form >
+        <label for="old" class="one">oldtext</label>
+        <input type="text" id="old" name="old">
+        <button type="button" class="two" onclick="replace()">replace</button>
+    </form>
+    <form >
+        <label for="new" class="third">newtext</label>
+        <input type="text" id="new" name="new">
+        <button type="button" class="all" onclick="replaceAll()">replaceall</button>
+    </form>
+
+</div>
+
+
+<script>
+    const textElement = document.getElementById('text');
+    function replace() {
+  let text = textElement.textContent;
+  textElement.textContent = text.replace('friends', 'Tarun');
+}
+function replaceAll() {
+  let text = textElement.textContent;
+  textElement.textContent = text.replace(/friends/g, 'Tarun');
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
